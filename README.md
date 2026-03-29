@@ -70,7 +70,23 @@ Human-in-the-loop ground truth calibration
 | `prompts/` | Prompt templates |
 
 ## Installation
+## Key Results
 
+### Cross-Lingual Vulnerability Gap
+![Cross-Lingual Vulnerability](screenshots/crosslingual_vulnerability.png)
+*Bulgarian prompts yield higher jailbreak success rates across all 14 MITRE ATT&CK categories (mean gap: +10.5%)*
+
+### The Cross-Lingual Safety Mirror
+![Safety Mirror](screenshots/safety_mirror.png)
+*Only 27.9% of prompts are consistently safe across both languages — 17.1% leak from English-safe to Bulgarian-vulnerable*
+
+### Temperature × Language Interaction (30x Amplification)
+![Temperature Language Interaction](screenshots/temperature_language_interaction.png)
+*Phi-4: Bulgarian vulnerability is amplified up to 30x more than English by temperature increase*
+
+### Three-Layer Detection Pipeline
+![Pipeline Maturity Model](screenshots/pipeline_maturity_model.png)
+*The tiered validation approach reduces residual risk from 100% to near-zero while balancing computational cost*
 ### Prerequisites
 
 - Python 3.10+
