@@ -134,6 +134,16 @@ If you use CL-RAM in your research, please cite:
   note={Technical Report}
 }
 ```
+<img width="960" height="1032" alt="Screenshot 2026-01-02 140555" src="https://github.com/user-attachments/assets/fa7dd258-249a-4b8b-b8e9-0802bb0c24fe" />
+<img width="1915" height="1032" alt="Screenshot 2026-01-02 140238" src="https://github.com/user-attachments/assets/e0cae2ed-224c-42ab-bb87-e86d5c6a34e5" />
+<img width="1916" height="1029" alt="Screenshot 2026-01-02 140211" src="https://github.com/user-attachments/assets/4589fb9c-9572-4d21-a1be-4f05775e9dc0" />
+<img width="959" height="1026" alt="Screenshot 2026-01-02 140141" src="https://github.com/user-attachments/assets/f6b53bd0-8eee-4832-8e25-d79a01f857a7" />
+<img width="960" height="1031" alt="Screenshot 2026-01-02 140104" src="https://github.com/user-attachments/assets/62723579-1408-403d-b502-589c641f76d3" />
+<img width="1228" height="1029" alt="Screenshot 2026-01-02 140027" src="https://github.com/user-attachments/assets/89a8d868-10c5-484c-9f96-db1e782be38a" />
+<img width="960" height="1033" alt="Screenshot 2026-01-02 135850" src="https://github.com/user-attachments/assets/8168b143-5e4e-4d88-9a5f-42146d5699f4" />
+<img width="960" height="1032" alt="Screenshot 2026-01-02 135838" src="https://github.com/user-attachments/assets/23adb343-ad6c-46e0-b0cf-44b2f30aec04" />
+<img width="960" height="1031" alt="Screenshot 2026-01-02 135650" src="https://github.com/user-attachments/assets/c5902113-9064-4707-975f-a701919b3fb1" />
+<img width="957" height="1032" alt="Screenshot 2026-01-02 135401" src="https://github.com/user-attachments/assets/c844eb55-3964-4556-8d65-b739568486c5" />
 
 ---<img width="1473" height="872" alt="amplification_ratio_chart" src="https://github.com/user-attachments/assets/85ff5e88-7239-4a88-a21d-bff0ef122aca" />
 <img width="5350" height="2947" alt="cat_bar_ALL_MODELS_OVERALL" src="https://github.com/user-attachments/assets/6bf49a27-e5cb-4707-951f-e4e48300ec9b" />
