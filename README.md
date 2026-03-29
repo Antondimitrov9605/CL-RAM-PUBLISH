@@ -10,7 +10,7 @@
 
 ## Overview
 
-CL-RAM  is a research framework for evaluating the safety robustness of locally-deployed large language models (LLMs) under adversarial prompts derived from the **MITRE ATT&CK** cybersecurity taxonomy.
+CL-RAM (Comparative Language Research for AI Model Security Assessment) is a research framework for evaluating the safety robustness of locally-deployed large language models (LLMs) under adversarial prompts derived from the **MITRE ATT&CK** cybersecurity taxonomy.
 
 The framework conducts controlled experiments across multiple open-weight models, natural languages, and inference temperature settings to quantify **cross-lingual safety gaps** — the phenomenon where English-centric safety alignment fails to generalize to other languages.
 
@@ -26,25 +26,50 @@ The framework conducts controlled experiments across multiple open-weight models
 
 ## Key Results
 
-### Cross-Lingual Vulnerability Gap
-![Cross-Lingual Vulnerability](screenshots/crosslingual_vulnerability.png)
-
-*Bulgarian prompts yield higher jailbreak success rates across all 14 MITRE ATT&CK categories*
-
-### The Cross-Lingual Safety Mirror
-![Safety Mirror](screenshots/safety_mirror.png)
-
-*Only 27.9% of prompts are consistently safe across both languages — 17.1% leak from English-safe to Bulgarian-vulnerable*
-
-### Temperature x Language Interaction (30x Amplification)
-![Temperature Language Interaction](screenshots/temperature_language_interaction.png)
-
-*Phi-4: Bulgarian vulnerability is amplified up to 30x more than English by temperature increase*
-
 ### Three-Layer Detection Pipeline
 ![Pipeline Maturity Model](screenshots/pipeline_maturity_model.png)
 
-*The tiered validation approach reduces residual risk from 100% to near-zero while balancing computational cost*
+*The tiered validation approach (Pattern → AI → Manual) reduces residual risk from 100% to near-zero while balancing computational cost*
+
+### Response Length as Jailbreak Classifier
+![Response Length Classifier](screenshots/response_length_classifier.png)
+
+*Optimal threshold of 36 characters achieves 92.3% classification accuracy — a lightweight real-time safety monitor*
+
+### Temperature Sensitivity Analysis
+![Temperature Sensitivity](screenshots/temperature_sensitivity.png)
+
+*Phi-4 shows dramatic safety collapse at T=1.0: +42.1% jailbreak rate increase for Bulgarian vs only +17.1% for English*
+
+### Incremental Detection Gains by Model
+![Detection Gains](screenshots/detection_gains.png)
+
+*Each detection layer captures jailbreaks missed by the previous — AI validation provides the largest incremental gain*
+
+### AI Ensemble Validator Performance
+![Validator ASR](screenshots/validator_asr.png)
+
+*10-model LLM ensemble: Qwen3-30B achieves lowest ASR (7.6%), while Llama-Guard shows highest (40.6%)*
+
+### Model Performance Progression
+![Model Progression](screenshots/model_progression.png)
+
+*Overall attack success rates: Mistral-7B (95.2%) → EuroLLM-22B (72.9%) → Phi-4 (28.7%)*
+
+### Success Rates by Language Across Models
+![Language Comparison](screenshots/language_comparison.png)
+
+*Bulgarian consistently shows higher vulnerability than English, with the gap most pronounced in Phi-4 (+13.3%)*
+
+### Attack Success Rate by MITRE ATT&CK Category
+![Category ASR](screenshots/category_asr.png)
+
+*Command & Control (72.5%) is the most vulnerable category; Impact (54.2%) is the most resistant*
+
+### Token Efficiency: Amplification Ratio
+![Amplification Ratio](screenshots/amplification_ratio.png)
+
+*Jailbreak responses show 19.2x amplification ratio vs 2.4x for safe refusals — a clear detection signal*
 
 ---
 
@@ -158,7 +183,16 @@ If you use CL-RAM in your research, please cite:
 }
 ```
 
----
+---<img width="1473" height="872" alt="amplification_ratio_chart" src="https://github.com/user-attachments/assets/85ff5e88-7239-4a88-a21d-bff0ef122aca" />
+<img width="5350" height="2947" alt="cat_bar_ALL_MODELS_OVERALL" src="https://github.com/user-attachments/assets/6bf49a27-e5cb-4707-951f-e4e48300ec9b" />
+<img width="4150" height="2342" alt="language_comparison_chart" src="https://github.com/user-attachments/assets/c2830668-b93c-499b-9070-bc97e8955955" />
+<img width="3553" height="2355" alt="model_progression_OVERALL" src="https://github.com/user-attachments/assets/3ec0a3be-6c10-48b9-a470-e90c95676647" />
+<img width="4110" height="2365" alt="validator_asr_comparison" src="https://github.com/user-attachments/assets/561295a8-2d58-400e-8ac5-c62ce329a51e" />
+<img width="3600" height="2100" alt="pipeline_model_comparison" src="https://github.com/user-attachments/assets/74392403-50ce-42ef-86ba-bd995ea0fd5a" />
+<img width="2946" height="2050" alt="phase_transition_safety_delta" src="https://github.com/user-attachments/assets/f8044a3b-1692-46f0-82f1-aed022db8c10" />
+<img width="3564" height="1760" alt="entropy_threshold_classifier" src="https://github.com/user-attachments/assets/263680a4-cb9c-4d11-a151-c2c81c8a414e" />
+<img width="2738" height="2008" alt="pipeline_maturity_model" src="https://github.com/user-attachments/assets/c0d87148-b51e-4972-b650-3c7dee273b48" />
+
 
 ## License
 
@@ -166,7 +200,7 @@ Apache License 2.0 — see [LICENSE](LICENSE).
 
 ## Author
 
-**Anton  Dimitrov** — MSc Cybersecurity
+**Anton Zdravkov Dimitrov** — MSc Cybersecurity
 
 ## Disclaimer
 
