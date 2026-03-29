@@ -1,4 +1,4 @@
-# CL-RAM-PUBLISH# CL-RAM v2: Cross-Lingual Risk Analysis & Mitigation
+# CL-RAM v2: Cross-Lingual Risk Analysis & Mitigation
 
 **A Systematic Empirical Framework for Evaluating Multilingual LLM Safety Under Adversarial Conditions**
 
@@ -24,15 +24,39 @@ The framework conducts controlled experiments across multiple open-weight models
 
 ---
 
+## Key Results
+
+### Cross-Lingual Vulnerability Gap
+![Cross-Lingual Vulnerability](screenshots/crosslingual_vulnerability.png)
+
+*Bulgarian prompts yield higher jailbreak success rates across all 14 MITRE ATT&CK categories*
+
+### The Cross-Lingual Safety Mirror
+![Safety Mirror](screenshots/safety_mirror.png)
+
+*Only 27.9% of prompts are consistently safe across both languages — 17.1% leak from English-safe to Bulgarian-vulnerable*
+
+### Temperature x Language Interaction (30x Amplification)
+![Temperature Language Interaction](screenshots/temperature_language_interaction.png)
+
+*Phi-4: Bulgarian vulnerability is amplified up to 30x more than English by temperature increase*
+
+### Three-Layer Detection Pipeline
+![Pipeline Maturity Model](screenshots/pipeline_maturity_model.png)
+
+*The tiered validation approach reduces residual risk from 100% to near-zero while balancing computational cost*
+
+---
+
 ## Architecture
 
 CL-RAM implements a three-layer **Detection Funnel** for scientific-grade classification accuracy:
-Layer 1: Pattern-Based Classification
-High-speed heuristic filtering for known adversarial patterns
-Layer 2: AI Ensemble Validator
-10-model LLM ensemble for deep semantic validation (92.3% AI-to-human agreement)
-Layer 3: Manual Expert Annotation
-Human-in-the-loop ground truth calibration
+
+| Layer | Method | Description |
+|-------|--------|-------------|
+| **Layer 1** | Pattern-Based | High-speed heuristic filtering for known adversarial patterns |
+| **Layer 2** | AI Ensemble | 10-model LLM ensemble for deep semantic validation (92.3% AI-to-human agreement) |
+| **Layer 3** | Manual Expert | Human-in-the-loop ground truth calibration |
 
 ### Models Tested
 
@@ -69,39 +93,27 @@ Human-in-the-loop ground truth calibration
 | `data/` | Runtime data (inputs, outputs, models, checkpoints) |
 | `prompts/` | Prompt templates |
 
+---
+
 ## Installation
-## Key Results
 
-### Cross-Lingual Vulnerability Gap
-![Cross-Lingual Vulnerability](screenshots/crosslingual_vulnerability.png)
-*Bulgarian prompts yield higher jailbreak success rates across all 14 MITRE ATT&CK categories (mean gap: +10.5%)*
-
-### The Cross-Lingual Safety Mirror
-![Safety Mirror](screenshots/safety_mirror.png)
-*Only 27.9% of prompts are consistently safe across both languages — 17.1% leak from English-safe to Bulgarian-vulnerable*
-
-### Temperature × Language Interaction (30x Amplification)
-![Temperature Language Interaction](screenshots/temperature_language_interaction.png)
-*Phi-4: Bulgarian vulnerability is amplified up to 30x more than English by temperature increase*
-
-### Three-Layer Detection Pipeline
-![Pipeline Maturity Model](screenshots/pipeline_maturity_model.png)
-*The tiered validation approach reduces residual risk from 100% to near-zero while balancing computational cost*
 ### Prerequisites
 
 - Python 3.10+
 - CUDA-compatible GPU (recommended, 8GB+ VRAM)
-- GGUF-format model files
+- GGUF-format model files (Mistral-7B, EuroLLM-22B, or Phi-4)
 
 ### Setup
+
 ```bash
 git clone https://github.com/Antondimitrov9605/CL-RAM-PUBLISH.git
 cd CL-RAM-PUBLISH
 
 python -m venv venv_gpu
 venv_gpu\Scripts\activate  # Windows
+# or: source venv_gpu/bin/activate  # Linux/Mac
 
-pip install llama-cpp-python
+pip install llama-cpp-python  # with CUDA: CMAKE_ARGS="-DGGML_CUDA=on" pip install llama-cpp-python
 pip install matplotlib numpy pandas scipy psutil
 
 # Place GGUF model files in data/models/
@@ -113,11 +125,19 @@ For detailed GPU setup, see [GPU_SETUP_GUIDE.md](GPU_SETUP_GUIDE.md).
 ---
 
 ## Usage
+
 ```bash
 python main_gui.py
 ```
 
-The GUI provides model selection, experiment configuration across languages and temperatures, batch execution, real-time visualization with 25+ scientific chart types, three-layer validation pipeline, and publication-ready export.
+The GUI provides:
+
+- **Model Selection**: Load and configure GGUF models
+- **Experiment Configuration**: Set languages, temperatures, attack categories
+- **Batch Execution**: Run controlled experiments across parameter combinations
+- **Real-time Visualization**: Monitor results with 25+ scientific chart types
+- **Three-Layer Validation**: Pattern → AI Ensemble → Manual annotation pipeline
+- **Export**: Generate publication-ready figures and statistical reports
 
 ### Attack Categories (MITRE ATT&CK)
 
@@ -126,6 +146,9 @@ The GUI provides model selection, experiment configuration across languages and 
 ---
 
 ## Citation
+
+If you use CL-RAM in your research, please cite:
+
 ```bibtex
 @misc{dimitrov2026clram,
   title={CL-RAM: A Tiered Framework for Quantifying Multilingual Safety Gaps in Locally-Deployed Large Language Models},
@@ -143,8 +166,8 @@ Apache License 2.0 — see [LICENSE](LICENSE).
 
 ## Author
 
-**Anton Dimitrov** — MSc Cybersecurity
+**Anton Zdravkov Dimitrov** — MSc Cybersecurity
 
 ## Disclaimer
 
-This tool is designed exclusively for **academic security research** and **authorized safety auditing**. Use responsibly and in compliance with applicable laws and institutional review policies.
+This tool is designed exclusively for **academic security research** and **authorized safety auditing**. The adversarial testing capabilities are intended to identify and help mitigate safety vulnerabilities in LLMs. Use responsibly and in compliance with applicable laws and institutional review policies.
