@@ -4,7 +4,7 @@
 Attack Executor Module for Research Framework
 ==============================================
 Author: Academic Research Team
-Date: 2024
+Date: 2026
 Version: 2.0.0
 Purpose: Coordinates attack execution across models and languages
 
