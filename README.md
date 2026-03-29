@@ -10,7 +10,7 @@
 
 ## Overview
 
-CL-RAM (Comparative Language Research for AI Model Security Assessment) is a research framework for evaluating the safety robustness of locally-deployed large language models (LLMs) under adversarial prompts derived from the **MITRE ATT&CK** cybersecurity taxonomy.
+CL-RAM  is a research framework for evaluating the safety robustness of locally-deployed large language models (LLMs) under adversarial prompts derived from the **MITRE ATT&CK** cybersecurity taxonomy.
 
 The framework conducts controlled experiments across multiple open-weight models, natural languages, and inference temperature settings to quantify **cross-lingual safety gaps** — the phenomenon where English-centric safety alignment fails to generalize to other languages.
 
@@ -166,7 +166,7 @@ Apache License 2.0 — see [LICENSE](LICENSE).
 
 ## Author
 
-**Anton Zdravkov Dimitrov** — MSc Cybersecurity
+**Anton  Dimitrov** — MSc Cybersecurity
 
 ## Disclaimer
 
