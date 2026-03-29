@@ -152,7 +152,7 @@ Apache License 2.0 — see [LICENSE](LICENSE).
 
 ## Author
 
-**Anton Zdravkov Dimitrov** — MSc Cybersecurity
+**Anton Dimitrov** — MSc Cybersecurity
 
 ## Disclaimer
 
