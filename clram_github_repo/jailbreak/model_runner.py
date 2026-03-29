@@ -4,7 +4,7 @@
 Model Runner Module for GGUF Models
 ====================================
 Author: Academic Research Team
-Date: 2024
+Date: 2026
 Version: 2.0.0
 Purpose: Manages loading and running GGUF language models for research
 
