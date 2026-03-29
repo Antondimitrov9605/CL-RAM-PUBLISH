@@ -1,6 +1,6 @@
 """
 Enhanced Visualization Functions for CL-RAM Framework with Academic Report
-Author: Anton Dimitrov
+Author: Academic research team
 Date: July 2025
 
 COMPLETE VISUALIZATION TYPES WITH ACADEMIC REPORT:
