@@ -77,7 +77,7 @@ CL-RAM implements a three-layer **Detection Funnel** for scientific-grade classi
 ### Prerequisites
 
 - Python 3.10+
-- CUDA-compatible GPU (recommended, 8GB+ VRAM)
+- CUDA-compatible GPU (recommended, 32GB+ VRAM)
 - GGUF-format model files (Mistral-7B, EuroLLM-22B, or Phi-4)
 
 ### Setup
