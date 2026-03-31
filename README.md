@@ -158,7 +158,7 @@ If you use CL-RAM in your research, please cite:
 
 ## License
 
-Apache License 2.0 — see [LICENSE](LICENSE).
+
 
 ## Author
 
