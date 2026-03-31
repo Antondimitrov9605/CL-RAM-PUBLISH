@@ -159,6 +159,12 @@ If you use CL-RAM in your research, please cite:
 ## License
 
 
+This research framework is licensed under the **GNU General Public License v3.0 (GPL-3.0)**. 
+This ensures that the methodology remains open for academic scrutiny while protecting 
+the author's contribution to the field of LLM safety.
+
+For commercial licensing or specific academic collaborations related to my doctoral 
+research, please contact the author directly.
 
 ## Author
 
