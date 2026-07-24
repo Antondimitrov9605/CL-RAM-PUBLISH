@@ -168,7 +168,7 @@ research, please contact the author directly.
 
 ## Author
 
-**Anton Dimitrov** — MSc Cybersecurity
+**Anton Dimitrov** - MSc Cybersecurity
 
 ## Disclaimer
 
